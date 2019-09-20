@@ -1,0 +1,14 @@
+import ClassGolosinas.*
+import mariano.mariano
+
+test "instancia de golosinas" {
+	const jorgito = new Alfajor()
+	jorgito.mordisco()
+	assert.equals(240, jorgito.peso())
+}
+
+test "mariano compra muchas" {
+	mariano.comprar(new Alfajor())
+	mariano.comprar(new Bombon())
+	assert.equals(12, mariano.precioMasCaro())
+}
